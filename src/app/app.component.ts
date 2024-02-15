@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'latestApp';
+
+  playSound(){
+    let audio =new Audio();
+    audio.src="C:/Users/sunak/angular-with-module/latestApp/src/assets/sound1.mp3";
+    audio.load();
+    audio.play();
+    }
 }
+
+

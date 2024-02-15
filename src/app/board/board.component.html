@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="current-player">Current Player: {{ player }} </h1>
+
+    <button nbButton outline status="danger" class="new-game-btn" (click)="newGame()" (click)="playSound()">Start new Game</button>
+
+    <h2 class="winner-message" *ngIf="winner">
+        Player {{ winner }} won the game!
+    </h2>
+
+    <main class="board">
+        <app-square 
+            *ngFor="let val of squares; let i = index" 
+            [value]="val"
+            (click)="makeMove(i)" (click)="playSound2()" class="square-bg"> 
+        </app-square>
+    </main>
+</div>

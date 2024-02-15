@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "test": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "namedInputs": {
+    "sharedGlobals": [],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/**/*.spec.[jt]s"
+    ]
+  },
+  "nxCloudAccessToken": "YjE0ZTc1NDYtZTk3OC00OGViLTgwYWQtMjE5YTU2Y2Q2MDg2fHJlYWQtd3JpdGU="
+}

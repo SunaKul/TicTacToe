@@ -1,0 +1,61 @@
+/* Center everything */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Apply font styles */
+body {
+    font-family: Arial, sans-serif; /* Change font family as desired */
+}
+
+h1, h2, button {
+    font-family: 'Arial Black', sans-serif; /* Change font family as desired */
+}
+
+.current-player, .winner-message {
+    font-size: 18px;
+}
+
+/* Adjust square styles */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* Reduce square size */
+    grid-template-rows: repeat(3, 150px); /* Reduce square size */
+    grid-gap: 10px;
+    background-color: #FFB6C1;
+}
+
+app-square {
+    width: 150px;
+    height: 150px;
+    font-size: 20px; /* Reduce font size for X and O */
+
+    background-color: #ff4081;
+}
+
+square-bg{
+    background-color: #ff4081;
+}
+
+.new-game-btn {
+    margin-top: 20px; /* Add space between button and other elements */
+    margin-bottom: 20px;
+    padding: 10px 20px; /* Increase padding for a more prominent look */
+    font-size: 18px; /* Increase font size for better readability */
+    background-color: #ff4081; /* Change background color to a charming color */
+    color: white; /* Change text color to contrast with background */
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 5px; /* Add rounded corners for a softer appearance */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.new-game-btn:hover {
+    background-color: #f50057; /* Darker shade of pink on hover for an interactive feel */
+}
+
+
